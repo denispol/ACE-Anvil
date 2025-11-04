@@ -15,7 +15,7 @@ modded class SCR_GetInUserAction : SCR_CompartmentUserAction
 		
 		if (userCharController.ACE_IsCarrier())
 		{
-			SetCannotPerformReason("#ACE-UserAction_Carrying");
+			SetCannotPerformReason(ACE_Carrying_FailReasons.CARRYING);
 			return false;
 		};
 		

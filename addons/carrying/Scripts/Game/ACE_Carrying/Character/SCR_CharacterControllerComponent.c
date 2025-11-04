@@ -32,13 +32,13 @@ modded class SCR_CharacterControllerComponent : CharacterControllerComponent
 		{
 			case ECharacterStance.PRONE:
 			{
-				cannotPerformReason = "#AR-Keybind_StanceProne";
+				cannotPerformReason = ACE_Carrying_FailReasons.STANCE_PRONE;
 				return false;
 			}
 			
 			case ECharacterStance.CROUCH:
 			{
-				cannotPerformReason = "#AR-Keybind_StanceCrouch";
+				cannotPerformReason = ACE_Carrying_FailReasons.STANCE_CROUCH;
 				return CanChangeStance(ECharacterStanceChange.STANCECHANGE_TOERECTED);
 			}
 		}
@@ -57,13 +57,13 @@ modded class SCR_CharacterControllerComponent : CharacterControllerComponent
 		{
 			case ECharacterStance.PRONE:
 			{
-				cannotPerformReason = "#AR-Keybind_StanceProne";
+				cannotPerformReason = ACE_Carrying_FailReasons.STANCE_PRONE;
 				return false;
 			}
 			
 			case ECharacterStance.STAND:
 			{
-				cannotPerformReason = "#AR-Keybind_StanceStand";
+				cannotPerformReason = ACE_Carrying_FailReasons.STANCE_STAND;
 				return CanChangeStance(ECharacterStanceChange.STANCECHANGE_TOCROUCH);
 			}
 		}
@@ -84,7 +84,7 @@ modded class SCR_CharacterControllerComponent : CharacterControllerComponent
 		// Trying to carry while unit is ragdolling will break things
 		if (casualtyCharController.GetAnimationComponent().IsRagdollActive())
 		{
-			cannotPerformReason = "#AR-UserActionUnavailable";
+			cannotPerformReason = ACE_Carrying_FailReasons.ACTION_UNAVAILABLE;
 			return false;
 		}
 		

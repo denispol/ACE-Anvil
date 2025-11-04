@@ -123,7 +123,7 @@ modded class SCR_RemoveCasualtyUserAction : SCR_CompartmentUserAction
 		SCR_CharacterControllerComponent userCharController = SCR_CharacterControllerComponent.Cast(userChar.GetCharacterController());
 		if (!userCharController || userCharController.ACE_IsCarrier())
 		{
-			SetCannotPerformReason("#ACE-UserAction_Carrying");
+			SetCannotPerformReason(ACE_Carrying_FailReasons.CARRYING);
 			return false;
 		}
 		

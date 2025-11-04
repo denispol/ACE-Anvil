@@ -42,7 +42,7 @@ class ACE_Captives_EscortCaptiveUserAction : ScriptedUserAction
 		SCR_CharacterControllerComponent userCharController = SCR_CharacterControllerComponent.Cast(user.FindComponent(SCR_CharacterControllerComponent));
 		if (userCharController.ACE_IsCarrier())
 		{
-			SetCannotPerformReason("#ACE-UserAction_Carrying");
+			SetCannotPerformReason(ACE_Carrying_FailReasons.CARRYING);
 			return false;
 		}
 		

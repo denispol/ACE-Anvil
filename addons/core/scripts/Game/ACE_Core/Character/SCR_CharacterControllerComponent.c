@@ -75,7 +75,7 @@ modded class SCR_CharacterControllerComponent : CharacterControllerComponent
 	{
 		if (ACE_IsCarrier())
 		{
-			cannotPerformReason = "#ACE-UserAction_Carrying";
+			cannotPerformReason = ACE_Carrying_FailReasons.CARRYING;
 			return false;
 		}
 		
@@ -85,7 +85,7 @@ modded class SCR_CharacterControllerComponent : CharacterControllerComponent
 		{
 			if (carriableComponent.IsCarried())
 			{
-				cannotPerformReason = "#ACE-UserAction_Carrying";
+				cannotPerformReason = ACE_Carrying_FailReasons.CARRYING;
 				return false;
 			}
 			
@@ -102,7 +102,7 @@ modded class SCR_CharacterControllerComponent : CharacterControllerComponent
 			
 			if (charController.ACE_IsCarried())
 			{
-				cannotPerformReason = "#ACE-UserAction_Carrying";
+				cannotPerformReason = ACE_Carrying_FailReasons.CARRYING;
 				return false;
 			}
 			
