@@ -4,10 +4,10 @@ class ACE_Medical_EpinephrineUserAction : SCR_MorphineUserAction
 	[Attribute(defvalue: ACE_Medical_FailReasons.NOT_INCAPACITATED, desc: "String for when target is not incapacitated")]
 	protected LocalizedString m_sNotIncapacitated;
 	
-	[Attribute(defvalue: "#AR-Inventory_Bleeding", desc: "String for when target is bleeding")]
+	[Attribute(defvalue: ACE_Medical_FailReasons.IS_BLEEDING, desc: "String for when target is bleeding")]
 	protected LocalizedString m_sIsBleeding;
 	
-	[Attribute(defvalue: "#ACE_Medical-FailReason_TooInjured", desc: "String for when target is too damaged")]
+	[Attribute(defvalue: ACE_Medical_FailReasons.TOO_DAMAGED, desc: "String for when target is too damaged")]
 	protected LocalizedString m_sTooDamaged;
 	
 	//------------------------------------------------------------------------------------------------
