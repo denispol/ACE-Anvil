@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------------------------
 class ACE_Medical_EpinephrineUserAction : SCR_MorphineUserAction
 {
-	[Attribute(defvalue: "#ACE_Medical-FailReason_NotUnconscious", desc: "String for when target is not incapacitated")]
+	[Attribute(defvalue: ACE_Medical_FailReasons.NOT_INCAPACITATED, desc: "String for when target is not incapacitated")]
 	protected LocalizedString m_sNotIncapacitated;
 	
 	[Attribute(defvalue: "#AR-Inventory_Bleeding", desc: "String for when target is bleeding")]
